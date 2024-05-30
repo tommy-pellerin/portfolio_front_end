@@ -1,0 +1,21 @@
+.skills-ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 0;
+}
+.skill-box{
+  text-align: center;
+  list-style-type: none;
+}
+.skill-logo{
+  width: 50px;
+}
+.skill-logo img{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+.skill-logo img:hover{
+  transform: rotate(360deg);
+}

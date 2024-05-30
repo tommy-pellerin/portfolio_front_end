@@ -1,0 +1,74 @@
+/*projects page*/
+.projects-page{
+  display: flex;
+  flex-direction: column;
+}
+.projects-page h1{
+  margin: 2rem auto;
+}
+.projects-page section{
+  height: 50vh;
+  margin-bottom: 1rem;
+}
+.screenshots-box{
+  display: flex;
+  justify-content: center;
+}
+.screenshot-box{
+  max-height: 400px; /*i fixed the box height because i couldn't find how to fix the max height depending on it parent*/
+  padding:1rem;
+}
+.screenshot-box img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.content-box{
+  padding: 1rem;
+}
+
+
+/*note-pade*/
+.note-pad{
+  background-color: #F0F8FF;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pro-game{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  
+}
+
+.velib-box{
+  background-color: #F0F8FF;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.keella{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.tcp{
+  background-color: #F0F8FF;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Change position to make the page responsive */
+@media (max-width: 768px) {
+  .project-box{
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    
+  }
+  section{
+    height: auto;
+  }
+}

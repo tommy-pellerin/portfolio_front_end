@@ -1,0 +1,91 @@
+/*body*/
+:root {
+  --color-background: white;
+  --color-text: black;
+}
+
+body.dark-mode {
+  --color-background: black;
+  --color-text: white;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/*Navbar*/
+nav{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #65AFB2; /* Top color */
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* Adjust this value to change the split point */
+  background-color: #FFA398; /* Bottom color */
+  z-index: -1;
+}
+.nav-icon{
+  align-self: center;
+  height: 4em;
+  margin-left: 2em;
+  border-radius: 20px;
+}
+.nav-icon:hover{
+  box-shadow: 0 0 10px grey;
+}
+.nav-icon img{
+  height: 100%;
+  width: 100%;
+}
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+nav li{
+  margin: 1rem;
+}
+nav a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 2px grey;
+}
+nav a:hover{
+  color: black;
+  
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* dark/light button*/
+nav button{
+  border-radius: 10px;  
+  height: 4rem;
+  align-self: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px grey;
+}
+/* Button background color when body has the .dark-mode class */
+body.dark-mode nav button{
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+nav button:hover{
+  box-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
